@@ -19,34 +19,38 @@ var artone={
                  You are reading article one and I am Deeksha,sitting here and typing my html file happily.
              </p>`
 }
-
-var htmlTemplate={
-    ` <html>
-    <head>
-        <title>$title</title>
-        <meta name="viewport" content="width-device-width,initial-scale-1" />
-        <link href="/ui/style.css" rel="stylesheet" />
-       <div class="center">
-       <img src="https://warroom.securestate.com/wp-content/uploads/2016/10/coding.jpg" class="img-medium"/>
-       </div>
-     
-    </head>
-     <body>
-        <div class="container">
+function createTemplate(data){
+    var title=data.title;
+    var heading=data.heading;
+    var content=data.content;
+    var htmlTemplate={
+        ` <html>
+        <head>
+            <title>$title</title>
+            <meta name="viewport" content="width-device-width,initial-scale-1" />
+            <link href="/ui/style.css" rel="stylesheet" />
+           <div class="center">
+           <img src="https://warroom.securestate.com/wp-content/uploads/2016/10/coding.jpg" class="img-medium"/>
+           </div>
          
-         <div>
-             <a href="/">Home</a>
-
-         </div>
-                      <a href="http://deekshabd1.imad.hasura-app.io/article-three">article three</a>
-         <hr/>
-             <h2>$heading</h2>
+        </head>
+         <body>
+            <div class="container">
+             
              <div>
-             $content
+                 <a href="/">Home</a>
+    
              </div>
-     </div>
- </body>   
-</html>`
+                          <a href="http://deekshabd1.imad.hasura-app.io/article-three">article three</a>
+             <hr/>
+                 <h2>$heading</h2>
+                 <div>
+                 $content
+                 </div>
+         </div>
+     </body>
+     return htmlTemplate;
+    </html>`
 }
 
 app.get('/', function (req, res) {
