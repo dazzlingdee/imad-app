@@ -5,6 +5,56 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var artone={
+    title: 'article1',
+    heading: 'article one',
+    content:`  
+             <p>
+                 You are reading article one and I am Deeksha,sitting here and typing my html file happily.you can take a look at my profile.I am really trying hard to make my best.Writing html code is always cool task.I enjoy the coding.
+             </p>
+             <p>
+                 You are reading article one and I am Deeksha,sitting here and typing my html file happily.
+             </p>
+             <p>
+                 You are reading article one and I am Deeksha,sitting here and typing my html file happily.
+             </p>`
+}
+
+var htmlTemplate={
+    ` <html>
+    <head>
+        <title>article1</title>
+        <meta name="viewport" content="width-device-width,initial-scale-1" />
+        <link href="/ui/style.css" rel="stylesheet" />
+       <div class="center">
+       <img src="https://warroom.securestate.com/wp-content/uploads/2016/10/coding.jpg" class="img-medium"/>
+       </div>
+     
+    </head>
+     <body>
+        <div class="container">
+         
+         <div>
+             <a href="/">Home</a>
+
+         </div>
+                      <a href="http://deekshabd1.imad.hasura-app.io/article-three">article three</a>
+         <hr/>
+             <h2>$heading</h2>
+             <p>
+                 You are reading article one and I am Deeksha,sitting here and typing my html file happily.you can take a look at my profile.I am really trying hard to make my best.Writing html code is always cool task.I enjoy the coding.
+             </p>
+             <p>
+                 You are reading article one and I am Deeksha,sitting here and typing my html file happily.
+             </p>
+             <p>
+                 You are reading article one and I am Deeksha,sitting here and typing my html file happily.
+             </p>
+     </div>
+ </body>   
+</html>`
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
