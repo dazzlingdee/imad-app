@@ -23,7 +23,7 @@ var artone={
 var htmlTemplate={
     ` <html>
     <head>
-        <title>article1</title>
+        <title>$title</title>
         <meta name="viewport" content="width-device-width,initial-scale-1" />
         <link href="/ui/style.css" rel="stylesheet" />
        <div class="center">
@@ -41,15 +41,9 @@ var htmlTemplate={
                       <a href="http://deekshabd1.imad.hasura-app.io/article-three">article three</a>
          <hr/>
              <h2>$heading</h2>
-             <p>
-                 You are reading article one and I am Deeksha,sitting here and typing my html file happily.you can take a look at my profile.I am really trying hard to make my best.Writing html code is always cool task.I enjoy the coding.
-             </p>
-             <p>
-                 You are reading article one and I am Deeksha,sitting here and typing my html file happily.
-             </p>
-             <p>
-                 You are reading article one and I am Deeksha,sitting here and typing my html file happily.
-             </p>
+             <div>
+             $content
+             </div>
      </div>
  </body>   
 </html>`
