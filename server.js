@@ -26,7 +26,9 @@ function createTemplate(data){
     var htmlTemplate={
         ` <html>
         <head>
-            <title>${title}</title>
+            <title>
+                ${title}
+            </title>
             <meta name="viewport" content="width-device-width,initial-scale-1" />
             <link href="/ui/style.css" rel="stylesheet" />
            <div class="center">
@@ -43,13 +45,16 @@ function createTemplate(data){
              </div>
                           <a href="http://deekshabd1.imad.hasura-app.io/article-three">article three</a>
              <hr/>
-                 <h2>${heading}</h2>
+                 <h2>
+                    ${heading}
+                 </h2>
                  <div>
-                  ${content}
+                     ${content}
                  </div>
          </div>
      </body>
-     </html>`
+     </html>
+     `;
     return htmlTemplate;
 }
 
@@ -65,7 +70,6 @@ app.get('/counter',function(req,res){
 
 app.get('/article-one',function(req,res){
    res.send(createTemplate(artone));
-  //res.send('article one');
 });
 
 app.get('/article-two',function(req,res){
