@@ -27,7 +27,7 @@ function createTemplate(data){
         ` <html>
         <head>
             <title>
-                ${title}
+                {title}
             </title>
             <meta name="viewport" content="width-device-width,initial-scale-1" />
             <link href="/ui/style.css" rel="stylesheet" />
@@ -46,10 +46,10 @@ function createTemplate(data){
                           <a href="http://deekshabd1.imad.hasura-app.io/article-three">article three</a>
              <hr/>
                  <h2>
-                    ${heading}
+                    {heading}
                  </h2>
                  <div>
-                     ${content}
+                     {content}
                  </div>
          </div>
      </body>
