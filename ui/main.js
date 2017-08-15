@@ -15,3 +15,14 @@ request.open('GET','http://deekshabd1.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 
+var nameInput=document.getElementById('name');
+var name=nameInput.value;
+var submit=documnet.getElementById('submit-button');
+submit.onclick=function(){
+    var names=['name1','name2'];
+    for(var i=0;i<names.length;i++){
+        list+='<li>'+names[i]+'</li>';
+    }
+    var ul=document.getElementById('namelist');
+    ul.innerHTML=list;
+};
