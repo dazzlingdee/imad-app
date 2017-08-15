@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles={
-    var 'article-one':{
+    'article-one':{
     title: 'article1',
     heading: 'article one',
     content:`  
@@ -20,7 +20,7 @@ var articles={
                  You are reading article one and I am Deeksha,sitting here and typing my html file happily.
              </p>`
     },
-    var 'article-two':{
+     'article-two':{
     title: 'article2',
     heading: 'article two',
     content:`  
@@ -36,7 +36,7 @@ var articles={
              Just be yourself...People may not like you...and you dont need to care..:)
          </p>`
     },
-    var 'article-three':{
+     'article-three':{
     title: 'article3',
     heading: 'article three',
     content:`          <p>
