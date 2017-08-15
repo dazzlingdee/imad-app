@@ -20,6 +20,7 @@ var name=nameInput.value;
 var submit=documnet.getElementById('submit-button');
 submit.onclick=function(){
     var names=['name1','name2'];
+    var list='';
     for(var i=0;i<names.length;i++){
         list+='<li>'+names[i]+'</li>';
     }
