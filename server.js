@@ -5,18 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articvles={
-    'article-one':{},
-    'article-two':{},
-    'article-three':{}
-};
- app.get(':articlename',function(req,res){
-     
-     var articlename=req.params.articlename;
-     res.send(createTemplate(articles[articlename]));
- });
-
-var artone={
+var articles={
+    var 'article-one':{
     title: 'article1',
     heading: 'article one',
     content:`  
@@ -29,7 +19,39 @@ var artone={
              <p>
                  You are reading article one and I am Deeksha,sitting here and typing my html file happily.
              </p>`
-}
+    },
+    var 'article-two':{
+    title: 'article2',
+    heading: 'article two',
+    content:`  
+         <p>
+             hey there...you are reading my article....
+         </p>
+         <div class="ab">
+         <p>
+             It is all about uniqueness...
+         </p>
+         </div>
+         <p>
+             Just be yourself...People may not like you...and you dont need to care..:)
+         </p>`
+    },
+    var 'article-three':{
+    title: 'article3',
+    heading: 'article three',
+    content:`          <p>
+             Myself Deeksha......
+         </p>
+         <div class="happy">
+         <p>
+             I love singing...and I love nature...
+         </p>
+         </div>
+         <p>
+             Always enjoy learning new stuffs...
+         </p>`
+        }
+};
 function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
@@ -69,6 +91,13 @@ function createTemplate(data){
         return htmlTemplate;
         
     }
+    
+     app.get(':articlename',function(req,res){
+     
+     var articlename=req.params.articlename;
+     res.send(createTemplate(articles[articlename]));
+ });
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
