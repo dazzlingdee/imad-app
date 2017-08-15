@@ -109,9 +109,9 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
-app.get('/article-one',function(req,res){
-   res.send(createTemplate(artone));
-});
+//app.get('/article-one',function(req,res){
+   //res.send(createTemplate(artone));
+//});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
