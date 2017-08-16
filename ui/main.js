@@ -32,7 +32,7 @@ submit.onclick=function(){
     ul.innerHTML=list;
             }
     }
-    }
+    
 };
     var nameInput=document.getElementById('name');
 var name=nameInput.value;
