@@ -17,12 +17,12 @@ request.send(null);
 
 var nameInput=document.getElementById('name');
 var name=nameInput.value;
-var submit= document.getElementById('submit-button');
+var submit=document.getElementById('submit-button');
 submit.onclick=function(){
     var names=['name1','name2'];
     var list='';
     for(var i=0;i<names.length;i++){
-        list+='<li>'+names[i]+'</li>';
+        list='<li>'+names[i]+'</li>';
     }
     var ul=document.getElementById('namelist');
     ul.innerHTML=list;
