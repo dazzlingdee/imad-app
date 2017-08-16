@@ -17,7 +17,7 @@ request.send(null);
 
 var nameInput=document.getElementById('name');
 var name=nameInput.value;
-var submit=documnet.getElementById('submit-button');
+var submit= document.getElementById('submit-button');
 submit.onclick=function(){
     var names=['name1','name2'];
     var list='';
