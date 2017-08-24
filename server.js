@@ -8,7 +8,7 @@ var config{
     database:'deekshabd1',
     host:'da.imad.hasura-app.io',
     posr:'5432',
-    password:process.env.DB_PASSWORD
+    password:process.env.'DB_PASSWORD'
 };
 var app = express();
 app.use(morgan('combined'));
