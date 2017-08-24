@@ -13,8 +13,6 @@ var config{
 var app = express();
 app.use(morgan('combined'));
 
-
-
 var names=[];
 app.get('/submit-name',function(req,res){
     var name=req.query.name;
@@ -132,6 +130,7 @@ app.get('/test-db',function(req,res){
         }
     });
 });
+
 var counter=0;
 app.get('/counter',function(req,res){
     counter=counter+1;
