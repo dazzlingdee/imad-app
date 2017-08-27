@@ -111,7 +111,7 @@ function createTemplate(data){
 
 
 
-var Pool = new Pool(config);
+var pool = new Pool(config);
 app.get('/test',function(req,res){
     pool.query('SELECT * FROM test',function(err,res){
         if(err){
