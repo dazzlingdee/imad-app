@@ -109,9 +109,7 @@ function createTemplate(data){
     }
     
 
-/*app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});*/
+
 
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
@@ -123,6 +121,10 @@ app.get('/test-db',function(req,res){
             res.send(JSON.stringify(result));
         }
     });
+});
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 var counter=0;
