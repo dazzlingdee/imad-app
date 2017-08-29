@@ -139,11 +139,23 @@ app.get('/submit-name',function(req,res){
     res.send(JSON.stringify(names));
 });
 
-app.get('/:articlename',function(req,res){
+app.get('/articles/:articlename',function(req,res){
      
-     var articlename=req.params.articlename;
-     res.send(createTemplate(articles[articlename]));
+     pool.query("SELECT * FROM article WHERE title="+request.params.articleName,function(err,res){
+         if(err){
+             res.status(500).send(err.toString());
+            } else{
+                if(res.rows.length == 0){
+                    res.status(404).send('Article not found');
+                }else{
+                    var articleData=result.rows(0);
+                     res.send(createTemplate(articles[articlename]));
+                }
+            }
  });
+ });
+    
+    
 
 
 //app.get('/article-one',function(req,res){
