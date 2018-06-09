@@ -1,0 +1,36 @@
+.underline{
+  text-decoration: underline;
+}
+
+.head{
+  color: #ff3300;
+}
+
+.outerBox{
+  border: 1px solid #111;
+  margin: 2%;
+}
+
+textarea{
+  width:70%;
+  float: left;
+}
+
+.input{
+  width: 30%;
+  height: 31px;
+}
+
+.formBorder{
+  border-bottom: 1px solid #111;
+}
+.table{
+width:1290px;
+}
+
+.sec
+{
+width:500px;
+float:right;
+border:1px solid black;
+}
